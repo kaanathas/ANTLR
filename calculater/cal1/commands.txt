@@ -1,0 +1,9 @@
+ export CLASSPATH=".:/usr/local/lib/antlr-4.9.1-complete.jar:$CLASSPATH"
+ alias antlr4='java -Xmx500M -cp "/usr/local/lib/antlr-4.7.1-complete.jar:$CLASSPATH" org.antlr.v4.Tool'
+ alias grun='java org.antlr.v4.gui.TestRig'
+
+java org.antlr.v4.Tool  -no-listener -visitor LabeledExpr.g4
+  
+javac --release 8 Expr*.java
+
+grun Expr prog -gui a.yl
